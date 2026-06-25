@@ -1,9 +1,9 @@
-function taoEmail(ten: string) {
+export function taoEmail(ten: string) {
     return `${ten}@test.com`;
 }
 
-console.log(taoEmail("anhdc4"));
+//console.log(taoEmail("anhdc4"));
 
-const taoEmail2 = (ten:string): string => `${ten}@test.com`;
+export const taoEmail2 = (ten:string): string => `${ten}@test.com`;
 
-console.log(taoEmail2("anhdc4"));
+//console.log(taoEmail2("anhdc4"));
