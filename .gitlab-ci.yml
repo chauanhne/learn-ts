@@ -1,0 +1,27 @@
+# ─────────────────────────────────────────────────────────────────────────────
+#  GitLab CI cho Playwright — ĐÂY LÀ NỘI DUNG BÀI 22.
+#  Lead có thể bật sẵn để có "CI xanh" từ đầu, hoặc để trống và cho học viên tự
+#  viết ở Bài 22. Pipeline chạy toàn bộ test trên mọi push & Merge Request.
+#  Image Playwright đã kèm sẵn browser → không cần `npx playwright install`.
+# ─────────────────────────────────────────────────────────────────────────────
+image: mcr.microsoft.com/playwright:v1.42.0-jammy
+
+stages:
+  - test
+
+playwright-test:
+  stage: test
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH'
+  script:
+    - npm ci
+    - npx playwright test
+  artifacts:
+    when: always
+    paths:
+      - playwright-report/
+      - test-results/
+    reports:
+      junit: test-results/results.json
+    expire_in: 1 week
