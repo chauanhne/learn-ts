@@ -11,3 +11,9 @@ playwright/.cache/
 .idea/
 .vscode/settings.json
 storageState*.json
+
+# Playwright
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
