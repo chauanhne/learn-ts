@@ -10,15 +10,3 @@ test('test', async ({ page }) => {
 
 });
 
-test('tongdaiwifi', async ({page}) => {
-    await page.goto('https://staging.tongdaiwifi.vn/');
-    
-});
-
-
-test('test2', async ({ page }) => {
-  await page.goto('https://staging.tongdaiwifi.vn/');
-  await page.locator('a[href="/internet/goi-giga"]').last().click();
-  await page.getByRole('button', { name: 'Đăng ký ngay' }).first().click({ force: true });
-
-});
