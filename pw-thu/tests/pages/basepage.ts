@@ -16,4 +16,8 @@ export class BasePage {
         await this.menubutton.click();
         await this.page.locator('#logout_sidebar_link').click();
     }
+
+    async ShoppingCart() {
+        await this.shoppingcartlink.click();
+    }
 }
