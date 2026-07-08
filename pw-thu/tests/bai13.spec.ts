@@ -10,7 +10,7 @@ test.beforeEach(async({page}) => {
     await expect(page).toHaveURL('https://www.saucedemo.com/inventory.html');
 })
 
-test('trangchu', async({page}) => {
+test('trangchu_slItem', async({page}) => {
     await expect(page.locator('.inventory_item')).toHaveCount(6);
 })
 

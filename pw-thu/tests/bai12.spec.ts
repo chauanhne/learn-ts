@@ -2,9 +2,6 @@ import {test, expect, Locator, Page} from '@playwright/test';
 import { LoginPage } from './pages/login';
 import { BasePage } from './pages/basepage';
 
-test.beforeEach(async({page}) => {
-    await page.goto('https://www.saucedemo.com/');
-})
 
 test('Login_true', async({page}) => {
     const loginPage = new LoginPage(page);

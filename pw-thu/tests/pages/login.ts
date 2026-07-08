@@ -15,7 +15,7 @@ constructor(page: Page) {
 }
 //Hành động
 async login(username: string, password: string) {
-    //await this.page.goto('https://www.saucedemo.com/');
+    await this.page.goto('https://www.saucedemo.com/');
     await this.username.fill(username);
     await this.password.fill(password);
     await this.loginButton.click();
